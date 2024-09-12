@@ -48,4 +48,4 @@ TODO extend: estrnn-detr and vsr-detr
 
 
 ## Acknowledgement
-Special thanks to [@clive819](https://github.com/clive819) for making an implementation of DETR public [here](https://github.com/clive819/Modified-DETR). Special thanks to [@hustvl](https://github.com/hustvl) for YOLOS [original implementation](https://github.com/hustvl/YOLOS)
+Special thanks to [@clive819](https://github.com/clive819) for making an implementation of DETR public [here](https://github.com/clive819/Modified-DETR). Special thanks to [@hustvl](https://github.com/hustvl) for [YOLOS original implementation](https://github.com/hustvl/YOLOS). Special thanks to [@zzh-tech](https://github.com/zzh-tech) for [ESTRNN original implementation](https://github.com/zzh-tech/ESTRNN). 
