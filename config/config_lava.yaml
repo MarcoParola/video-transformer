@@ -1,0 +1,86 @@
+defaults:
+  - _self_
+  - metadataScaling
+  - enhancer
+  - yolos
+  
+seed: 42
+numGroups: 8
+growthRate: 32
+currentDir: ${hydra:runtime.cwd}
+
+# MARK: - transformer
+model: null
+dummy: False
+hiddenDims: 512
+numHead: 8
+numEncoderLayer: 6
+numDecoderLayer: 6
+dimFeedForward: 2048
+dropout: .1
+numQuery: 80
+numClass: 4
+numBlocks:
+  - 6
+  - 6
+  - 6
+  - 6
+inChans: 1
+
+# MARK: - yolo dataset
+targetHeight: 608
+targetWidth: 608
+
+# MARK: - miscellaneous
+device: cuda
+weight: ""
+
+
+# MARK: - training config
+lr: 5e-7
+lrBackbone: 1e-5
+batchSize: 8
+weightDecay: 1e-4
+epochs: 100
+lrDrop: 1000
+clipMaxNorm: .1
+patience: 5
+
+# MARK: - loss
+classCost: .005
+bboxCost: 4.
+giouCost: 2.
+eosCost: .1
+
+# MARK: - dataset
+dataDir: /home/andreas/data/harborfront/
+trainAnnFile: ${hydra:runtime.cwd}/data/new/Train.json
+valAnnFile: ${hydra:runtime.cwd}/data/new/Valid.json
+testAnnFile: ${hydra:runtime.cwd}/data/new/Test.json
+
+# MARK: - video dataset
+trainVideoFrames: ${hydra:runtime.cwd}/data/new/videoFrames/Train
+valVideoFrames: ${hydra:runtime.cwd}/data/new/videoFrames/Valid
+testVideoFrames: ${hydra:runtime.cwd}/data/new/videoFrames/Test
+videoDir: ${hydra:runtime.cwd}/data/Video Clips
+numFrames: 5
+
+spynet:
+  weights: ${hydra:runtime.cwd}/checkpoint/spynet/network-sintel-final.pytorch
+  freeze: True
+
+# MARK: - miscellaneous
+outputDir: ${hydra:runtime.cwd}/checkpoint
+taskName: DETR
+numWorkers: 1
+multi: False
+amp: False
+
+# MARK: - wandb
+wandbEntity: marcoparola
+wandbProject: conditioning-transformer
+
+inference:
+  savePlot: False
+  showPlot: False
+  savePrediction: False
