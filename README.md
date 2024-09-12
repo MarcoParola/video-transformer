@@ -12,7 +12,7 @@ Design of a transformer-based architecture for multi-frame aggregation for objec
 ## **Multiple frame fusion**
 
 We use two distinct architectures for aggregate multiple frames:
-- BasicVSR, originally proposed for Video Super Resolution in [BasicVSR: The Search for Essential Components in Video Super-Resolution and Beyond](https://arxiv.org/abs/2012.02181). We use the implementation propose [here](https://github.com/sunny2109/BasicVSR_IconVSR_PyTorch)
+- BasicVSR, originally proposed for Video Super Resolution in [BasicVSR: The Search for Essential Components in Video Super-Resolution and Beyond](https://arxiv.org/abs/2012.02181). We use the implementation proposed [here](https://github.com/sunny2109/BasicVSR_IconVSR_PyTorch)
 - EST-RNN, originally proposed for Video Deblurring in [Efficient Spatio-Temporal Recurrent Neural Network for Video Deblurring](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123510188.pdf). We use the [official implementation](https://github.com/zzh-tech/ESTRNN) proposed by the authors. We also propose a variation of the aggregation block to remove artifacts during the reconstruction. Set the reconstruction param in the [estrnn config file](./config/estrnn.yaml#L) choosing between `original` or `interpolation`.
 
 ## **Installation**
