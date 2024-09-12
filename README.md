@@ -1,6 +1,6 @@
 # conditioning-transformer
 
-[![size](https://img.shields.io/github/languages/code-size/MarcoParola/conditioning-transformer?style=plastic)]()
+[![size](https://img.shields.io/github/languages/code-size/MarcoParola/video-transformer?style=plastic)]()
 [![license](https://img.shields.io/static/v1?label=OS&message=Linux&color=green&style=plastic)]()
 [![Python](https://img.shields.io/static/v1?label=Python&message=3.10&color=blue&style=plastic)]()
 
